@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 
-load_dotenv()
+
 TOKEN = os.getenv("TOKEN")    
 intents = discord.Intents.default()
 intents.message_content = True
@@ -45,5 +45,6 @@ async def on_message(message):
     await message.channel.send("@everyone@here ")
 
   await bot.process_commands(message)
+
 
 bot.run(TOKEN)
